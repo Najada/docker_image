@@ -47,4 +47,6 @@ RUN sdkmanager "platform-tools" "platforms;android-27" "emulator"
 RUN sdkmanager "system-images;android-27;default;x86"
 RUN echo no | avdmanager create avd -n FlutterEmulator -k "system-images;android-27;default;x86" -d "Nexus 5"
 # RUN echo no | avdmanager create avd -n emuTest -k "system-images;android-27;default;x86"
-RUN emulator -avd FlutterEmulator -no-window -no-audio
+# RUN emulator -avd FlutterEmulator -no-window -no-audio
+
+CMD emulator -avd FlutterEmulator -no-window -no-audio
